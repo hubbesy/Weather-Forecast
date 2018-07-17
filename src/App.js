@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Day } from './Day'
+
+import { Week } from './Week'
 
 class App extends Component {
   render() {
@@ -9,12 +10,12 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">sydney hubbell</h1>
+          <h1 className="App-title">Weather Forecast</h1>
         </header>
         <p className="App-intro">
            This is a test website to learn ReactJS
         </p>
-        <Day />
+        <Week />
       </div>
     );
   }
