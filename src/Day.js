@@ -7,7 +7,16 @@ import snow from './img/snow.png';
 import rain from './img/rain.png';
 
 export class Day extends Component {
-  
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e) {
+    const dayId = e.target.id;
+    this.props.onClick(dayId);
+  }
+
   render(){
     let pic;
     if (this.props.desc === 'Sun') {
@@ -26,10 +35,10 @@ export class Day extends Component {
       pic = rain;
     }
     return(
-      <div className= "day">
-         <h2> {this.props.name} </h2>
-         <img src={pic} alt= {this.props.desc} height="100px" width="100px" img />
-         <p> {this.props.min} / {this.props.max}</p>
+      <div className= "day" onClick = {this.handleClick} id ={this.props.id}>
+         <h2 id ={this.props.id}> {this.props.name} </h2>
+         <img id ={this.props.id} src={pic} alt= {this.props.desc} height="100px" width="100px" img />
+         <p id ={this.props.id}> {this.props.min} / {this.props.max}</p>
       </div>
     );
   }
