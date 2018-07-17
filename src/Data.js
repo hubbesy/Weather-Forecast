@@ -2,42 +2,37 @@
 
 const Day1 = {
   name: "Monday",
-  photo: "./sun.jpg",
-  desc: "Sunny",
+  desc: "Sun",
   maxTemp: "78 F",
   minTemp: "68 F"
 };
 
 const Day2 = {
   name: "Tuesday",
-  photo: "./sun.jpg",
-  desc: "Sunny",
-  maxTemp: "78 F",
-  minTemp: "68 F"
+  desc: "Snow",
+  maxTemp: "99 F",
+  minTemp: "43 F"
 };
 
 const Day3 = {
   name: "Wednesday",
-  photo: "./sun.jpg",
-  desc: "Sunny",
-  maxTemp: "78 F",
-  minTemp: "68 F"
+  desc: "Rain",
+  maxTemp: "85 F",
+  minTemp: "72 F"
 };
 
 const Day4 = {
   name: "Thursday",
-  photo: "./sun.jpg",
-  desc: "Sunny",
-  maxTemp: "78 F",
-  minTemp: "68 F"
+  desc: "Cloud",
+  maxTemp: "30 F",
+  minTemp: "21 F"
 };
 
 const Day5 = {
   name: "Friday",
-  photo: "./sun.jpg",
-  desc: "Sunny",
-  maxTemp: "78 F",
-  minTemp: "68 F"
+  desc: "Mostly Cloud",
+  maxTemp: "54 F",
+  minTemp: "22 F"
 };
 
 export const myWeek = [Day1, Day2, Day3, Day4, Day5];
