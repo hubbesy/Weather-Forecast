@@ -25,12 +25,12 @@ export class DateTime extends Component {
     var h = parseInt(hour, 10);
     var minute = this.props.name.substring(14,16);
     let amPm;
-    if (h == 0) {
+    if (h === 0) {
       hour = '12'
       amPm = 'AM'
     } else if (h < 12) {
       amPm = 'AM';
-    } else if (h == 12) {
+    } else if (h === 12) {
       amPm = 'PM'
     } else {
       var temp = h - 12;
