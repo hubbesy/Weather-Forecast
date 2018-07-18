@@ -9,15 +9,15 @@ export class WeatherData extends Component {
     };
   }
 
-  componentDidMount() {
-    fetch('http://api.openweathermap.org/data/2.5/forecast?id=4930956&units=imperial&APPID=59bede1d2257c136e1c01baa464f61ba')
+  componentDidUpdate() {
+    console.log(this.props.city);
+    fetch('http://api.openweathermap.org/data/2.5/forecast?id='+this.props.city+'&units=imperial&APPID=59bede1d2257c136e1c01baa464f61ba')
     .then(response => response.json())
     .then(data => {
       let chunks = data.list.map((chunk, i) => {
         return(
-          <div key={chunk.results}>
+          <div key={i}>
             <ThreeHourChunk
-               onClick = {this.props.onClick}
                minTemp = {chunk.main.temp_min}
                maxTemp = {chunk.main.temp_max}
                desc = {chunk.weather[0].description}
