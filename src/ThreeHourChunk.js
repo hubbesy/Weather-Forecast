@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { DateTime } from './DateTime';
 import p01d from './img/01d.png';
 import p01n from './img/01n.png';
 import p02d from './img/02d.png';
@@ -55,7 +56,7 @@ export class ThreeHourChunk extends Component {
     var pic = icons[this.props.icon];
     return(
       <div className= "threeHourChunk" onClick = {this.handleClick} id ={this.props.id}>
-         <h2 id ={this.props.id}> {this.props.name} </h2>
+         <DateTime id ={this.props.id} name={this.props.name} />
          <img id ={this.props.id} src={pic} alt= {this.props.desc} img />
          <p id= {this.props.id}> {this.props.desc} </p>
          <p id ={this.props.id}> {this.props.minTemp}F / {this.props.maxTemp}F </p>
