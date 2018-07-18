@@ -16,6 +16,7 @@ export class CitySelect extends Component {
     return (
       <div>
         <select id = "cities" onChange= {this.handleChange} >
+          <option value=""> Select a city </option>
           <option value="4930956"> Boston </option>
           <option value="4887398"> Chicago </option>
           <option value="4684888"> Dallas </option>

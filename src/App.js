@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Week } from './Week'
 import {CitySelect} from './CitySelect';
+import { WeatherData } from './WeatherData';
 
 var cities = {
   "4930956": "Boston",
@@ -18,7 +18,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      city: "4930956"
+      city: ""
     };
     this.changeCity= this.changeCity.bind(this);
   }
@@ -41,7 +41,7 @@ class App extends Component {
            5 Day, 3 Hour Weather Forecast
         </h3>
         <CitySelect onChange={this.changeCity} />
-        <Week city={this.state.city} />
+        <WeatherData city={this.state.city} />
       </div>
     );
   }
