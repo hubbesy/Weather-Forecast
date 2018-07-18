@@ -8,15 +8,13 @@ export class Week extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      displayingHourly: false,
       dayIndexHourly: -1
     };
-    this.displayHourly = this.displayHourly.bind(this);
+    this.changeIndex = this.changeIndex.bind(this);
   }
 
-  displayHourly(chunkId) {
+  changeIndex(chunkId) {
     this.setState({
-      displayingHourly: !(this.state.displayingHourly),
       dayIndexHourly: chunkId
     });
   }
@@ -24,7 +22,7 @@ export class Week extends Component {
   render(){
     return (
       <div>
-        <WeatherData onClick={this.displayHourly} />
+        <WeatherData city = {this.props.city} onClick={this.changeIndex} />
       </div>
     );
   }

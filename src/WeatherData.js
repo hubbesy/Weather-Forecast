@@ -10,7 +10,8 @@ export class WeatherData extends Component {
   }
 
   componentDidMount() {
-    fetch('http://api.openweathermap.org/data/2.5/forecast?id=4930956&units=imperial&APPID=59bede1d2257c136e1c01baa464f61ba')
+    var city = this.props.city;
+    fetch('http://api.openweathermap.org/data/2.5/forecast?id='+ this.props.city+'&units=imperial&APPID=59bede1d2257c136e1c01baa464f61ba')
     .then(response => response.json())
     .then(data => {
       let chunks = data.list.map((chunk, i) => {
